@@ -1,0 +1,75 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* PILL GROUPS (still minimal but neutral) */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 3px 10px;
+    margin: 4px;
+}
+
+/* WORKSPACES — PURE MONO */
+#workspaces button {
+    color: #888;
+    background: transparent;
+    padding: 0 4px;
+    margin: 0 2px;
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    color: #ddd;
+}
+
+#workspaces button.active {
+    color: #fff;
+}
+
+/* MODULES — ALL SAME COLOR FAMILY */
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-clipboard,
+#custom-power {
+    color: #ddd;
+    margin: 0 6px;
+}
+
+/* MUTED STATES */
+#pulseaudio.muted,
+#network.disconnected {
+    color: #777;
+}
+
+#battery.warning {
+    color: #bbb;
+}
+
+#battery.critical {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* TOOLTIP */
+tooltip {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 10px;
+    color: #ddd;
+}
