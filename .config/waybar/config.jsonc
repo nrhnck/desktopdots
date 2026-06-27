@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 3,
+
+    "margin-top": 6,
+    "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery",
+        "custom/clipboard",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+        "format-wifi": "{essid} ",
+        "format-ethernet": "Ethernet ",
+        "format-disconnected": "Offline",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "muted",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "on-click": "blueman-manager"
+    },
+
+    "custom/clipboard": {
+        "format": "",
+        "on-click": "cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout"
+    }
+}
